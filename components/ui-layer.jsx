@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import { manifestoSections, whatsappHref } from "../lib/products";
+import ProductCarousel from "./product-carousel";
+import { manifestoSections, productCarouselItems, whatsappHref } from "../lib/products";
 
 function CopyBlock({ align = "left", eyebrow, title, body, cta = false }) {
   const alignment =
@@ -89,24 +90,35 @@ export default function UILayer({ scrollRef }) {
         ))}
 
         <section className="flex min-h-[72vh] items-end py-16 md:py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="glass-panel mb-10 flex w-full flex-col gap-6 rounded-[2rem] px-7 py-8 md:flex-row md:items-end md:justify-between md:px-10 md:py-10"
-          >
-            <div className="max-w-3xl">
-              <p className="text-[0.72rem] uppercase tracking-[0.38em] text-[#B78594]">Aura</p>
-              <h2 className="mt-4 font-display text-[2.5rem] leading-tight text-[#241B18] md:text-[3.6rem]">
-                No final, nao e so sobre o que voce usa.
-              </h2>
-            </div>
-            <p className="max-w-xl text-base leading-8 text-[#655550]">
-              E sobre a maneira como a sua presenca ocupa o espaco. O objeto flutua, a luz respira e a
-              memoria fica.
-            </p>
-          </motion.div>
+          <div className="w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="glass-panel mb-10 flex w-full flex-col gap-6 rounded-[2rem] px-7 py-8 md:flex-row md:items-end md:justify-between md:px-10 md:py-10"
+            >
+              <div className="max-w-3xl">
+                <p className="text-[0.72rem] uppercase tracking-[0.38em] text-[#B78594]">Aura</p>
+                <h2 className="mt-4 font-display text-[2.5rem] leading-tight text-[#241B18] md:text-[3.6rem]">
+                  No final, nao e so sobre o que voce usa.
+                </h2>
+              </div>
+              <p className="max-w-xl text-base leading-8 text-[#655550]">
+                E sobre a maneira como a sua presenca ocupa o espaco. O objeto flutua, a luz respira e a
+                memoria fica.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.28 }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <ProductCarousel items={productCarouselItems} />
+            </motion.div>
+          </div>
         </section>
       </div>
     </div>
