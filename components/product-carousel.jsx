@@ -61,15 +61,15 @@ export default function ProductCarousel({ items }) {
             href={item.href}
             target="_blank"
             rel="noreferrer"
-            className="group relative min-w-[84vw] snap-center overflow-hidden rounded-[1.7rem] border border-[rgba(198,169,107,0.18)] bg-[rgba(255,250,246,0.72)] shadow-[0_24px_50px_rgba(92,64,58,0.14)] sm:min-w-[73vw] md:min-w-[27rem] md:rounded-[2rem]"
+            className="group relative min-w-[76vw] snap-center overflow-hidden rounded-[1.7rem] border border-[rgba(198,169,107,0.18)] bg-[rgba(255,250,246,0.72)] shadow-[0_24px_50px_rgba(92,64,58,0.14)] sm:min-w-[64vw] md:min-w-[23rem] md:rounded-[2rem]"
           >
-            <div className="relative h-[22rem] overflow-hidden sm:h-[24rem] md:h-[32rem]">
+            <div className="relative h-[18rem] overflow-hidden sm:h-[20rem] md:h-[26rem]">
               <Image
                 src={item.image}
                 alt={item.name}
                 fill
                 className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                sizes="(max-width: 640px) 84vw, (max-width: 768px) 73vw, 27rem"
+                sizes="(max-width: 640px) 76vw, (max-width: 768px) 64vw, 23rem"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,14,12,0)_15%,rgba(20,14,12,0.22)_72%,rgba(20,14,12,0.48)_100%)]" />
             </div>
@@ -78,7 +78,7 @@ export default function ProductCarousel({ items }) {
                 <p className="text-[0.66rem] uppercase tracking-[0.3em] text-[#F0DCD8] md:text-[0.72rem] md:tracking-[0.34em]">
                   {item.category}
                 </p>
-                <h4 className="mt-2 max-w-[10rem] font-display text-[1.6rem] leading-[0.96] text-[#FFF7F0] sm:max-w-[12rem] sm:text-[1.85rem] md:mt-3 md:max-w-[16rem] md:text-[2.4rem]">
+                <h4 className="mt-2 max-w-[9rem] font-display text-[1.45rem] leading-[0.96] text-[#FFF7F0] sm:max-w-[11rem] sm:text-[1.7rem] md:mt-3 md:max-w-[14rem] md:text-[2.1rem]">
                   {item.name}
                 </h4>
               </div>
